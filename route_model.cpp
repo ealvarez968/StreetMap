@@ -47,7 +47,7 @@ RouteModel::Node *RouteModel::Node::FindNeighbor(std::vector<int> node_indices){
 
 void RouteModel::Node::FindNeighbors(){
 	for(auto & road : parent_model->node_to_road[this->index]){
-      const RouteModel::Node *new_neighbor  = this->FindNeighbor(parent_model->Ways()[road->way].nodes);
+      RouteModel::Node *new_neighbor  = this->FindNeighbor(parent_model->Ways()[road->way].nodes);
 	if(new_neighbor){
       this->neighbors.emplace_back(new_neighbor);
     }
