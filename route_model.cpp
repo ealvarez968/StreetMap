@@ -39,9 +39,10 @@ RouteModel::Node *RouteModel::Node::FindNeighbor(std::vector<int> node_indices){
         closest_node  = &parent_model->SNodes()[node_index];
       }
     }
-         return closest_node;
+         
     
   }
+  return closest_node;
   
 }
 
